@@ -32,7 +32,8 @@ DJANGO_APPS = [
 ]
 
 PROJECT_APPS = [
-    
+    'apps.blog',
+    'apps.category',
 ]
 
 THIRD_PARTY_APPS = [
@@ -46,14 +47,18 @@ INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS
 
 # CKEditor
 CKEDITOR_CONFIGS = {
+    # 'default': {
+    #     'toolbar': 'Custom',
+    #     'toolbar_Custom': [
+    #         ['Bold', 'Italic', 'Underline'],
+    #         ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+    #         ['Link', 'Unlink'],
+    #         ['RemoveFormat', 'Source']
+    #     ],
+    #     'autoParagraph': False
+    # }
     'default': {
-        'toolbar': 'Custom',
-        'toolbar_Custom': [
-            ['Bold', 'Italic', 'Underline'],
-            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
-            ['Link', 'Unlink'],
-            ['RemoveFormat', 'Source']
-        ],
+        'toolbar': 'full',
         'autoParagraph': False
     }
 }
@@ -126,7 +131,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
 LANGUAGE_CODE = 'es'
-TIME_ZONE = 'UTC-3'
+TIME_ZONE = 'America/Montevideo'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
